@@ -145,8 +145,11 @@ nav li{
         font-size: 1.5rem;
     }
     .container { 
-        grid-template-rows: repeat(3, 35vw);
+        grid-template-rows: repeat(3, 30vw);
         grid-template-columns: repeat(3, 30vw);
+    }
+    .boxtext{
+        font-size: 12vw;
     }
 
     nav li{
