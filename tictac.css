@@ -33,8 +33,9 @@ nav li{
 
 .label{
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 1vw;
+    right: 5vw;
+    
 }
 
 .gameContainer{ 
@@ -147,6 +148,15 @@ nav li{
         grid-template-rows: repeat(3, 20vw);
         grid-template-columns: repeat(3, 20vw);
     }
+
+    nav li{
+        font-size: 1.5rem;
+    }
+    nav .small{
+        width: 20px;
+        height: 10px;i
+    }
+
 } 
 
 
