@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&family=Press+Start+2P&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+nav{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    height: 55px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    font-family: 'Press Start 2P', cursive;
+    animation: neon2 1.5s ease-in-out infinite alternate;
+    
+    
+}
+
+ nav ul{
+    list-style-type: none;
+}
+
+nav li{
+    display: flex;
+    align-self: center;
+    letter-spacing: 5px;
+}
+
+.label{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.gameContainer{ 
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'Poor Story', cursive;
+    position: relative;
+    
+}
+
+.box{
+    border: 1px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box.toggle{
+    color: white;
+    border-color: white;
+}
+
+.box:hover{
+    background-color: rgb(242, 234, 250);
+}
+
+.info {
+    font-size: 22px;
+}
+
+.boxtext.white{
+    color: white;
+}
+
+.gameInfo{
+    padding: 0 34px;
+    font-family: 'Poor Story', cursive;
+}
+
+.gameInfo.toggle{
+    color: white;
+}
+.gameInfo h1{
+    font-size: 2.5rem;
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+#reset {
+    margin: 0 23px;
+    padding: 1px 18px;
+    background: #c4dfff;
+    border-color: #228dff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Poor Story', cursive;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.line{
+    background-color: black;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color: #911d91;
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 950px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container { 
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+} 
+
+
+.input{
+    visibility: hidden;
+}
+
+.label{
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    background-color: lightgrey;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.circle{
+    width: 34px;
+    background-color: white;
+    height: 34px;
+    border-radius: 50%;
+    top: 3px;
+    position: absolute;
+    left: 3px;
+    animation: toggleOff 0.3s linear  backwards ;
+}
+
+.input:checked + .label{
+    background-color: white;
+    
+}
+
+.input:checked + .label .circle{
+    animation: toggleOn 0.4s linear forwards ;
+    background-color: black;
+}
+
+@keyframes toggleOn{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(40px);
+    }
+}
+@keyframes toggleOff{
+    0%{
+        transform: translateX(40px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes neon2 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff,
+        0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff,
+        0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
+    }
+  }
